@@ -9,14 +9,20 @@ import logging
 from alice_sdk import AliceRequest, AliceResponse
 
 # Импортируем модуль с логикой игры
-from history import handle_dialog
+from main import handle_dialog
 
 # Импортируем подмодули Flask для запуска веб-сервиса.
 from flask import Flask, request
 app = Flask(__name__)
 
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
+app.config['SECRET_KEY'] = 'alice'
+logging.basicConfig(
+    filename='example.log',
+    format='%(asctime)s %(name)s %(message)s',
+    level=logging.INFO
+    )
 
 # Хранилище данных о сессиях.
 session_storage = {}
@@ -42,5 +48,5 @@ def main():
     return alice_response.dumps()
 
 
-#if __name__ == '__main__':
-app.run('0.0.0.0', port=5000, debug=True)
+if __name__ == '__main__':
+    app.run('0.0.0.0', port=2000, debug=True)

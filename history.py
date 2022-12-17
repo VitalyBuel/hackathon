@@ -4,8 +4,8 @@ from itertools import cycle
 
 
 with open("it-dictionary.csv", "r", encoding="utf8") as csvfile:
-    data = csv.DictReader(csvfile, delimiter=",", quotechar=" ")
-    events = {x["event"]: [x["word"], x['difficulty']] for x in data}
+    data = csv.DictReader(csvfile, delimiter="/", quotechar=" ")
+    events = {x["event"]: [x["year"], x['difficulty'], x['alternative']] for x in data}
 
 
 # Функция для непосредственной обработки диалога.
@@ -36,42 +36,41 @@ def handle_dialog(request, response, user_storage):
             user_storage['questions'] = inf_list
 
             event = next(user_storage['questions'])
-            word = events[event][0]
-            buttons = get_random_buttons(word)
+            year = events[event][0]
+            #buttons = get_random_buttons(year)
 
             user_storage["event"] = event
-            user_storage["answer"] = word
-            user_storage["buttons"] = buttons
+            user_storage["answer"] = year
+            #user_storage["buttons"] = buttons
             user_storage["right_answers"] = 0
-            response.set_text('Я буду говорить значение слова, а тебе нужно угадать что это.\n'
-                              'Если захочешь остановить игру, скажи "конец игры".\n'
-                              'Первый вопрос: {}'.format(user_storage["event"]))
-            response.set_buttons(user_storage["buttons"])
+            response.set_text('Я буду говорить события из русской истории, а ты напишешь мне их даты.\n'
+                              'Для завершения игры скажите "конец игры".\n'
+                              'Скажи, когда произошло: {}'.format(user_storage["event"]))
+            #response.set_buttons(user_storage["buttons"])
 
             return response, user_storage
 
         elif request.command.lower() == user_storage["answer"]:
             # Пользователь ввел правильный вариант ответа.
             event = next(user_storage['questions'])
-            word = events[event][0]
-            buttons = get_random_buttons(word)
+            year = events[event][0]
+            #buttons = get_random_buttons(year)
             user_storage["event"] = event
-            user_storage["answer"] = word
-            user_storage["buttons"] = buttons
+            user_storage["answer"] = year
+            #user_storage["buttons"] = buttons
             user_storage["right_answers"] += 1
             response.set_text('Верно!\n'
-                              'Следующий вопрос. Что означает: {}'.format(user_storage["event"]))
-            response.set_buttons(user_storage["buttons"])
+                              'Следующий вопрос. Когда произошло событие: {}'.format(user_storage["event"]))
+            #response.set_buttons(user_storage["buttons"])
 
             return response, user_storage
 
-        buttons = get_random_buttons(user_storage['answer'])
+        #buttons = get_random_buttons(user_storage['answer'])
 
-        response.set_buttons(buttons)
+        #response.set_buttons(buttons)
         response.set_text("Неверно! Попробуй еще раз.")
 
         return response, user_storage
-
 
 
 # def get_random_buttons(date):
@@ -85,7 +84,3 @@ def handle_dialog(request, response, user_storage):
 #     buttons = [{'title': str(date), 'hide': True} for date in dates]
 #
 #     return buttons
-
-
-if __name__ == '__main__':
-    handle_dialog()

@@ -1,0 +1,2009 @@
+2022-12-17 05:29:08,047 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 05:29:08,047 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 05:29:08,050 werkzeug  * Restarting with stat
+2022-12-17 05:29:08,590 werkzeug  * Debugger is active!
+2022-12-17 05:29:08,597 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 05:29:39,447 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '289a5d70-38f6-4ddf-838c-2da998f76334', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:29:39,448 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "289a5d70-38f6-4ddf-838c-2da998f76334",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо, что мы снова встретились!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:29:39,449 werkzeug 127.0.0.1 - - [17/Dec/2022 05:29:39] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:29:48,399 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': '289a5d70-38f6-4ddf-838c-2da998f76334', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:29:48,400 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "289a5d70-38f6-4ddf-838c-2da998f76334",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Ошибка в коде, из-за которой программа дает сбой или работает неправильно?",
+    "buttons": [
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 05:29:48,401 werkzeug 127.0.0.1 - - [17/Dec/2022 05:29:48] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:29:51,105 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': '289a5d70-38f6-4ddf-838c-2da998f76334', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'деплой', 'original_utterance': 'деплой', 'nlu': {'tokens': ['деплой'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:29:51,105 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "289a5d70-38f6-4ddf-838c-2da998f76334",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "buttons": [
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ],
+    "text": "Ошибочка!! Попробуй еще раз.\nОшибка в коде, из-за которой программа дает сбой или работает неправильно?"
+  }
+}
+2022-12-17 05:29:51,106 werkzeug 127.0.0.1 - - [17/Dec/2022 05:29:51] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:30:05,336 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'bb9e7912-9ecb-4c4e-89e8-cfc04804b536', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:05,337 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "bb9e7912-9ecb-4c4e-89e8-cfc04804b536",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо, что мы снова встретились!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:30:05,337 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:05] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:30:08,463 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'b025f0e0-e165-4fbd-9072-2c5ffae4b009', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:08,463 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "b025f0e0-e165-4fbd-9072-2c5ffae4b009",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветик!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:30:08,464 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:08] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:30:22,083 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'b025f0e0-e165-4fbd-9072-2c5ffae4b009', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:22,118 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:22] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 05:30:34,815 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '42f677e1-ff6f-4a26-bf69-8d3ffb904075', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:34,815 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "42f677e1-ff6f-4a26-bf69-8d3ffb904075",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветик!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:30:34,817 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:34] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:30:40,559 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': '42f677e1-ff6f-4a26-bf69-8d3ffb904075', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'помощь', 'original_utterance': 'помощь', 'nlu': {'tokens': ['помощь'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:40,560 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "42f677e1-ff6f-4a26-bf69-8d3ffb904075",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я помогаю тебе проверить твое знание слов из ИТ сферы в формате викторины.\n Начнем?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:30:40,560 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:40] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:30:52,419 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': '42f677e1-ff6f-4a26-bf69-8d3ffb904075', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:30:52,468 werkzeug 127.0.0.1 - - [17/Dec/2022 05:30:52] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 05:31:06,444 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': '42f677e1-ff6f-4a26-bf69-8d3ffb904075', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'нет', 'original_utterance': 'нет', 'nlu': {'tokens': ['нет'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:31:06,445 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "42f677e1-ff6f-4a26-bf69-8d3ffb904075",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": true,
+    "text": "Спасибо за игру! Рада была пообщаться!!"
+  }
+}
+2022-12-17 05:31:06,445 werkzeug 127.0.0.1 - - [17/Dec/2022 05:31:06] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:44:01,424 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 05:44:01,434 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 05:44:01,438 werkzeug  * Restarting with stat
+2022-12-17 05:44:01,926 werkzeug  * Debugger is active!
+2022-12-17 05:44:01,937 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 05:44:12,451 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:44:12,451 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Здравствуй!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:44:12,452 werkzeug 127.0.0.1 - - [17/Dec/2022 05:44:12] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:44:22,827 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'погнал', 'original_utterance': 'погнал', 'nlu': {'tokens': ['погнал'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:44:22,869 werkzeug 127.0.0.1 - - [17/Dec/2022 05:44:22] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 05:44:47,211 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:44:47,212 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Что говорят, когда нужно немного поменять логику программы, слегка что\u2011то донастроить?",
+    "buttons": [
+      {
+        "title": "зааджастить",
+        "hide": true
+      },
+      {
+        "title": "грейдануть",
+        "hide": true
+      },
+      {
+        "title": "пофиксить",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 05:44:47,213 werkzeug 127.0.0.1 - - [17/Dec/2022 05:44:47] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:44:59,029 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE', 'new': False}, 'request': {'command': 'зааджастить', 'original_utterance': 'зааджастить', 'nlu': {'tokens': ['зааджастить'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:44:59,029 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE",
+    "new": false
+  },
+  "response": {
+    "end_session": false,
+    "text": "Верно!!\n\nСледующий вопрос:\n Ежедневные короткие (от 5 до 30 минут) встречи команды с целью поделиться прогрессом по выполненным задачам за предыдущий день и озвучить план работ на текущий день.",
+    "buttons": [
+      {
+        "title": "спека",
+        "hide": true
+      },
+      {
+        "title": "дейли",
+        "hide": true
+      },
+      {
+        "title": "реф",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 05:44:59,030 werkzeug 127.0.0.1 - - [17/Dec/2022 05:44:59] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:45:02,383 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 3, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'реф', 'original_utterance': 'реф', 'nlu': {'tokens': ['реф'], 'entities': [{'type': 'YANDEX.FIO', 'tokens': {'start': 0, 'end': 1}, 'value': {'first_name': 'реф'}}], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:45:02,385 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 3,
+    "session_id": "e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "buttons": [
+      {
+        "title": "спека",
+        "hide": true
+      },
+      {
+        "title": "дейли",
+        "hide": true
+      },
+      {
+        "title": "реф",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ],
+    "text": "Не то!! Попробуй еще раз.\nЕжедневные короткие (от 5 до 30 минут) встречи команды с целью поделиться прогрессом по выполненным задачам за предыдущий день и озвучить план работ на текущий день."
+  }
+}
+2022-12-17 05:45:02,386 werkzeug 127.0.0.1 - - [17/Dec/2022 05:45:02] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:45:05,730 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 4, 'session_id': 'e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:45:05,731 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 4,
+    "session_id": "e04ad54a-fdcf-41e9-895a-dbaa8a62f2f2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Все окей :)!\nПравильный ответ - дедлайн\n\nПродолжим:\n Как называется крайний срок сдачи проекта?",
+    "buttons": [
+      {
+        "title": "брейншторм",
+        "hide": true
+      },
+      {
+        "title": "сплойт",
+        "hide": true
+      },
+      {
+        "title": "дедлайн",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 05:45:05,732 werkzeug 127.0.0.1 - - [17/Dec/2022 05:45:05] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:45:10,215 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'b741235d-7828-4cfd-8a59-4c24dd1ca51b', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:45:10,216 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "b741235d-7828-4cfd-8a59-4c24dd1ca51b",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Здравствуй!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:45:10,217 werkzeug 127.0.0.1 - - [17/Dec/2022 05:45:10] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:45:14,141 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'b741235d-7828-4cfd-8a59-4c24dd1ca51b', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'нет', 'original_utterance': 'нет', 'nlu': {'tokens': ['нет'], 'entities': [], 'intents': {'YANDEX.REJECT': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:45:14,141 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "b741235d-7828-4cfd-8a59-4c24dd1ca51b",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": true,
+    "text": "Спасибо за игру! Рада была пообщаться!!"
+  }
+}
+2022-12-17 05:45:14,141 werkzeug 127.0.0.1 - - [17/Dec/2022 05:45:14] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:46:26,240 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 05:46:26,240 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 05:46:26,242 werkzeug  * Restarting with stat
+2022-12-17 05:46:26,727 werkzeug  * Debugger is active!
+2022-12-17 05:46:26,735 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 05:50:08,834 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 05:50:08,834 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 05:50:08,837 werkzeug  * Restarting with stat
+2022-12-17 05:50:09,675 werkzeug  * Debugger is active!
+2022-12-17 05:50:09,684 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 05:50:17,030 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'a9eb2165-6908-456a-8083-59fd4c11bbe6', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:50:17,030 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "a9eb2165-6908-456a-8083-59fd4c11bbe6",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо, что мы снова встретились!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:50:17,031 werkzeug 127.0.0.1 - - [17/Dec/2022 05:50:17] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:50:27,280 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'a9eb2165-6908-456a-8083-59fd4c11bbe6', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:50:27,329 werkzeug 127.0.0.1 - - [17/Dec/2022 05:50:27] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 05:50:42,177 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '01f24211-bc9e-4570-b042-880a48915e0d', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:50:42,178 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "01f24211-bc9e-4570-b042-880a48915e0d",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Привет!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 05:50:42,179 werkzeug 127.0.0.1 - - [17/Dec/2022 05:50:42] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:50:44,129 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': '01f24211-bc9e-4570-b042-880a48915e0d', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:50:44,130 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "01f24211-bc9e-4570-b042-880a48915e0d",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Ошибка в коде, из-за которой программа дает сбой или работает неправильно?",
+    "buttons": [
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 05:50:44,131 werkzeug 127.0.0.1 - - [17/Dec/2022 05:50:44] "POST /alice HTTP/1.1" 200 -
+2022-12-17 05:50:51,945 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': '01f24211-bc9e-4570-b042-880a48915e0d', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 05:50:51,946 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "01f24211-bc9e-4570-b042-880a48915e0d",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": true,
+    "text": "Спасибо за игру!\n Правильных ответов: 0\nДо встречи!"
+  }
+}
+2022-12-17 05:50:51,947 werkzeug 127.0.0.1 - - [17/Dec/2022 05:50:51] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:00:59,816 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 10:00:59,829 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 10:00:59,832 werkzeug  * Restarting with stat
+2022-12-17 10:01:00,411 werkzeug  * Debugger is active!
+2022-12-17 10:01:00,422 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 10:02:02,943 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '9596b0a5-659f-404e-8992-bab743a15a7a', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:02:02,982 werkzeug 127.0.0.1 - - [17/Dec/2022 10:02:02] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 10:04:47,668 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 10:04:47,668 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 10:04:47,671 werkzeug  * Restarting with stat
+2022-12-17 10:04:48,226 werkzeug  * Debugger is active!
+2022-12-17 10:04:48,234 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 10:04:55,375 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '73e8ba42-ca51-4b4b-a8ba-d29d298c0aab', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:04:55,375 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "73e8ba42-ca51-4b4b-a8ba-d29d298c0aab",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Привет!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ],
+    "events": [
+      {
+        "name": "начало диалога"
+      }
+    ]
+  }
+}
+2022-12-17 10:04:55,376 werkzeug 127.0.0.1 - - [17/Dec/2022 10:04:55] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:05:51,659 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': '73e8ba42-ca51-4b4b-a8ba-d29d298c0aab', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:05:51,660 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "73e8ba42-ca51-4b4b-a8ba-d29d298c0aab",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Завершать задачу, закрывать задачу, когда она полностью готова?",
+    "buttons": [
+      {
+        "title": "комплитить",
+        "hide": true
+      },
+      {
+        "title": "ручка",
+        "hide": true
+      },
+      {
+        "title": "матчится",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:05:51,661 werkzeug 127.0.0.1 - - [17/Dec/2022 10:05:51] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:06:02,222 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '5e89f560-a451-4033-a4ef-b9a93320bed5', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:06:02,223 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "5e89f560-a451-4033-a4ef-b9a93320bed5",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветствую тебя!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ],
+    "events": [
+      {
+        "name": "начало диалога"
+      }
+    ]
+  }
+}
+2022-12-17 10:06:02,224 werkzeug 127.0.0.1 - - [17/Dec/2022 10:06:02] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:06:05,750 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': '5e89f560-a451-4033-a4ef-b9a93320bed5', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE', 'new': False}, 'request': {'command': 'помощь', 'original_utterance': 'помощь', 'nlu': {'tokens': ['помощь'], 'entities': [], 'intents': {'YANDEX.HELP': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:06:05,751 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "5e89f560-a451-4033-a4ef-b9a93320bed5",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE",
+    "new": false
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я помогаю тебе проверить твое знание слов из ИТ сферы в формате викторины.\n Начнем?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 10:06:05,752 werkzeug 127.0.0.1 - - [17/Dec/2022 10:06:05] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:06:09,093 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': '5e89f560-a451-4033-a4ef-b9a93320bed5', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': False, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:06:09,094 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "5e89f560-a451-4033-a4ef-b9a93320bed5",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": false,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Ежедневные короткие (от 5 до 30 минут) встречи команды с целью поделиться прогрессом по выполненным задачам за предыдущий день и озвучить план работ на текущий день.",
+    "buttons": [
+      {
+        "title": "дейли",
+        "hide": true
+      },
+      {
+        "title": "спека",
+        "hide": true
+      },
+      {
+        "title": "реф",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:06:09,094 werkzeug 127.0.0.1 - - [17/Dec/2022 10:06:09] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:06:11,519 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '9b14967d-e629-4234-8d51-563faa287dce', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:06:11,519 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "9b14967d-e629-4234-8d51-563faa287dce",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Здравствуй!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ],
+    "events": [
+      {
+        "name": "начало диалога"
+      }
+    ]
+  }
+}
+2022-12-17 10:06:11,520 werkzeug 127.0.0.1 - - [17/Dec/2022 10:06:11] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:10,745 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB', 'new': True}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:10,745 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB",
+    "new": true
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо, что мы снова встретились!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ],
+    "events": [
+      {
+        "name": "начало диалога"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:10,745 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:10] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:17,782 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:17,783 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Цель спринта (бывает одна или несколько) которую команда берется сделать.",
+    "buttons": [
+      {
+        "title": "гол",
+        "hide": true
+      },
+      {
+        "title": "скоуп",
+        "hide": true
+      },
+      {
+        "title": "фича",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:17,783 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:17] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:23,435 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'гол', 'original_utterance': 'гол', 'nlu': {'tokens': ['гол'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:23,436 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Правильно!!\n\nЕдем дальше!:\n Еще не запланированный объем работы который требуется выполнить команде?",
+    "buttons": [
+      {
+        "title": "гол",
+        "hide": true
+      },
+      {
+        "title": "бэклог",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:23,436 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:23] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:26,411 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 3, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'бэклог', 'original_utterance': 'бэклог', 'nlu': {'tokens': ['бэклог'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:26,411 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 3,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Верно!!\n\nСледующее:\n Ежедневные короткие (от 5 до 30 минут) встречи команды с целью поделиться прогрессом по выполненным задачам за предыдущий день и озвучить план работ на текущий день.",
+    "buttons": [
+      {
+        "title": "спека",
+        "hide": true
+      },
+      {
+        "title": "дейли",
+        "hide": true
+      },
+      {
+        "title": "реф",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:26,412 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:26] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:32,945 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 4, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'подсказка', 'original_utterance': 'подсказка', 'nlu': {'tokens': ['подсказка'], 'entities': [], 'intents': {'YANDEX.HELP': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:32,945 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 4,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Так называется кратер на видимой стороне Луны",
+    "buttons": [
+      {
+        "title": "спека",
+        "hide": true
+      },
+      {
+        "title": "дейли",
+        "hide": true
+      },
+      {
+        "title": "реф",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:32,946 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:32] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:36,143 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 5, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:36,144 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 5,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Ничего, бывает :)!\nПравильный ответ - комплитить\n\nСледующее:\n Завершать задачу, закрывать задачу, когда она полностью готова?",
+    "buttons": [
+      {
+        "title": "ручка",
+        "hide": true
+      },
+      {
+        "title": "матчится",
+        "hide": true
+      },
+      {
+        "title": "комплитить",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:36,146 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:36] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:39,082 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 6, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:39,083 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 6,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Ничего, все ещё впереди!!\nПравильный ответ - баг\n\nПродолжим:\n Ошибка в коде, из-за которой программа дает сбой или работает неправильно?",
+    "buttons": [
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:39,083 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:39] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:19:51,157 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 7, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'баг', 'original_utterance': 'баг', 'nlu': {'tokens': ['баг'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:19:51,157 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 7,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Отлично!!\n\nЕдем дальше!:\n Что говорят, когда нужно немного поменять логику программы, слегка что\u2011то донастроить?",
+    "buttons": [
+      {
+        "title": "грейдануть",
+        "hide": true
+      },
+      {
+        "title": "зааджастить",
+        "hide": true
+      },
+      {
+        "title": "пофиксить",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:19:51,158 werkzeug 127.0.0.1 - - [17/Dec/2022 10:19:51] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:20:01,819 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 8, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:20:01,819 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 8,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Жаль!!\nПравильный ответ - дедлайн\n\nДалее:\n Как называется крайний срок сдачи проекта?",
+    "buttons": [
+      {
+        "title": "брейншторм",
+        "hide": true
+      },
+      {
+        "title": "сплойт",
+        "hide": true
+      },
+      {
+        "title": "дедлайн",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:20:01,820 werkzeug 127.0.0.1 - - [17/Dec/2022 10:20:01] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:20:10,435 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 9, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:20:10,435 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 9,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Практикой можно достичь совершенства!!\nПравильный ответ - коммититься\n\nСледующий вопрос:\n Что значит обещать выполнить определенный объем работы в оговоренные сроки.",
+    "buttons": [
+      {
+        "title": "таска",
+        "hide": true
+      },
+      {
+        "title": "буст",
+        "hide": true
+      },
+      {
+        "title": "коммититься",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:20:10,436 werkzeug 127.0.0.1 - - [17/Dec/2022 10:20:10] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:20:24,611 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 10, 'session_id': 'af233f34-39eb-47bd-902f-b89407082aff', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:20:24,612 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 10,
+    "session_id": "af233f34-39eb-47bd-902f-b89407082aff",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": true,
+    "text": "Спасибо за игру!\n Правильных ответов: 3\nДо встречи!"
+  }
+}
+2022-12-17 10:20:24,612 werkzeug 127.0.0.1 - - [17/Dec/2022 10:20:24] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:26:33,478 werkzeug  * Detected change in 'E:\\Projects\\Dev\\projects_django\\quiz\\alice_sdk.py', reloading
+2022-12-17 10:26:33,543 werkzeug  * Restarting with stat
+2022-12-17 10:26:34,539 werkzeug  * Debugger is active!
+2022-12-17 10:26:34,550 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 10:26:58,866 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': True, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:26:58,866 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": true,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветствую тебя!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ],
+    "analytics": [
+      {
+        "name": "начало диалога"
+      }
+    ]
+  }
+}
+2022-12-17 10:26:58,867 werkzeug 127.0.0.1 - - [17/Dec/2022 10:26:58] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:07,611 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 1, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'да', 'original_utterance': 'да', 'nlu': {'tokens': ['да'], 'entities': [], 'intents': {'YANDEX.CONFIRM': {'slots': {}}, 'handle_dialog': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:07,611 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 1,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Я буду говорить значение слова, а тебе нужно угадать что это.\nЕсли захочешь остановить игру, скажи \"конец игры\".\n\nПервый вопрос:\n Ошибка в коде, из-за которой программа дает сбой или работает неправильно?",
+    "buttons": [
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:27:07,612 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:07] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:15,806 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 2, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'подсказка', 'original_utterance': 'подсказка', 'nlu': {'tokens': ['подсказка'], 'entities': [], 'intents': {'YANDEX.HELP': {'slots': {}}}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:15,806 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 2,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Тогда подсказка от меня. Самые известные разновидности этих насекомых - майский и колорадский. Назови это насекомое на английском.",
+    "buttons": [
+      {
+        "title": "баг",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "дроп",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:27:15,807 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:15] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:24,765 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 3, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'баг', 'original_utterance': 'баг', 'nlu': {'tokens': ['баг'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:24,766 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 3,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Правильно!!\n\nДалее:\n Еще не запланированный объем работы который требуется выполнить команде?",
+    "buttons": [
+      {
+        "title": "гол",
+        "hide": true
+      },
+      {
+        "title": "бэклог",
+        "hide": true
+      },
+      {
+        "title": "деплой",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:27:24,767 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:24] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:35,127 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 4, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'бэклог', 'original_utterance': 'бэклог', 'nlu': {'tokens': ['бэклог'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:35,127 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 4,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо!!\n\nЕдем дальше!:\n Завершать задачу, закрывать задачу, когда она полностью готова?",
+    "buttons": [
+      {
+        "title": "ручка",
+        "hide": true
+      },
+      {
+        "title": "комплитить",
+        "hide": true
+      },
+      {
+        "title": "матчится",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:27:35,128 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:35] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:43,304 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 5, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'ручка', 'original_utterance': 'ручка', 'nlu': {'tokens': ['ручка'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:43,304 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 5,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "buttons": [
+      {
+        "title": "ручка",
+        "hide": true
+      },
+      {
+        "title": "комплитить",
+        "hide": true
+      },
+      {
+        "title": "матчится",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ],
+    "text": "Не то!! Попробуй еще раз.\nЗавершать задачу, закрывать задачу, когда она полностью готова?"
+  }
+}
+2022-12-17 10:27:43,306 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:43] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:27:48,203 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 6, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'не знаю', 'original_utterance': 'не знаю', 'nlu': {'tokens': ['не', 'знаю'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:27:48,204 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 6,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Потренируйся ещё немного!!\nПравильный ответ - гол\n\nСледующий вопрос:\n Цель спринта (бывает одна или несколько) которую команда берется сделать.",
+    "buttons": [
+      {
+        "title": "скоуп",
+        "hide": true
+      },
+      {
+        "title": "фича",
+        "hide": true
+      },
+      {
+        "title": "гол",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:27:48,205 werkzeug 127.0.0.1 - - [17/Dec/2022 10:27:48] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:28:00,533 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 7, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'скоуп', 'original_utterance': 'скоуп', 'nlu': {'tokens': ['скоуп'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:28:00,535 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 7,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "buttons": [
+      {
+        "title": "скоуп",
+        "hide": true
+      },
+      {
+        "title": "фича",
+        "hide": true
+      },
+      {
+        "title": "гол",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ],
+    "text": "Ой!! Попробуй еще раз.\nЦель спринта (бывает одна или несколько) которую команда берется сделать."
+  }
+}
+2022-12-17 10:28:00,535 werkzeug 127.0.0.1 - - [17/Dec/2022 10:28:00] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:28:03,813 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 8, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'гол', 'original_utterance': 'гол', 'nlu': {'tokens': ['гол'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:28:03,814 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 8,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Точно!!\n\nСледующий вопрос:\n Что значит обещать выполнить определенный объем работы в оговоренные сроки.",
+    "buttons": [
+      {
+        "title": "таска",
+        "hide": true
+      },
+      {
+        "title": "коммититься",
+        "hide": true
+      },
+      {
+        "title": "буст",
+        "hide": true
+      },
+      {
+        "title": "не знаю",
+        "hide": true
+      },
+      {
+        "title": "подсказка"
+      }
+    ]
+  }
+}
+2022-12-17 10:28:03,815 werkzeug 127.0.0.1 - - [17/Dec/2022 10:28:03] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:28:13,842 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Minsk', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19044)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 9, 'session_id': 'dcd65849-5c5e-4ae0-9b4e-908784360ec2', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'new': False, 'user_id': 'D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB'}, 'request': {'command': 'конец игры', 'original_utterance': 'конец игры', 'nlu': {'tokens': ['конец', 'игры'], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 10:28:13,843 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 9,
+    "session_id": "dcd65849-5c5e-4ae0-9b4e-908784360ec2",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+    },
+    "new": false,
+    "user_id": "D8DDEFFB97FF78307B6E617E7EBB8785AF3C3CE5986F78E77B0C82520C82AECB"
+  },
+  "response": {
+    "end_session": true,
+    "text": "Спасибо за игру!\n Правильных ответов: 3\nДо встречи!"
+  }
+}
+2022-12-17 10:28:13,843 werkzeug 127.0.0.1 - - [17/Dec/2022 10:28:13] "POST /alice HTTP/1.1" 200 -
+2022-12-17 10:45:34,381 werkzeug  * Detected change in 'E:\\Projects\\Dev\\projects_django\\quiz\\alice_sdk.py', reloading
+2022-12-17 10:45:34,456 werkzeug  * Restarting with stat
+2022-12-17 10:45:35,161 werkzeug  * Debugger is active!
+2022-12-17 10:45:35,168 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 10:52:01,842 werkzeug  * Detected change in 'E:\\Projects\\Dev\\projects_django\\quiz\\alice_sdk.py', reloading
+2022-12-17 10:52:01,945 werkzeug  * Restarting with stat
+2022-12-17 10:52:02,592 werkzeug  * Debugger is active!
+2022-12-17 10:52:02,601 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 11:30:15,170 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '7db7281f-01e7-4c73-8fd4-d79fd336d89f', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 11:30:15,199 werkzeug 127.0.0.1 - - [17/Dec/2022 11:30:15] "[35m[1mPOST /alice HTTP/1.1[0m" 500 -
+2022-12-17 11:30:54,054 werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:2000
+ * Running on http://192.168.1.7:2000
+2022-12-17 11:30:54,054 werkzeug [33mPress CTRL+C to quit[0m
+2022-12-17 11:30:54,057 werkzeug  * Restarting with stat
+2022-12-17 11:30:54,560 werkzeug  * Debugger is active!
+2022-12-17 11:30:54,567 werkzeug  * Debugger PIN: 855-372-438
+2022-12-17 11:31:55,740 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '80e7c016-14b9-47a5-ad35-86184c788d5a', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 11:31:55,740 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "80e7c016-14b9-47a5-ad35-86184c788d5a",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Хорошо, что мы снова встретились!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 11:31:55,742 werkzeug 127.0.0.1 - - [17/Dec/2022 11:31:55] "POST /alice HTTP/1.1" 200 -
+2022-12-17 11:36:50,501 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '34f3840d-2fd7-400a-bae8-561c1719c68d', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 11:36:50,501 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "34f3840d-2fd7-400a-bae8-561c1719c68d",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветик!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 11:36:50,502 werkzeug 127.0.0.1 - - [17/Dec/2022 11:36:50] "POST /alice HTTP/1.1" 200 -
+2022-12-17 11:43:05,274 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'UTC', 'client_id': 'ru.yandex.searchplugin/7.16 (none none; android 4.4.2)', 'interfaces': {'screen': {}, 'payments': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '471928cc-a844-495a-b38c-c923d7d540bc', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': '0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3'}, 'application': {'application_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'new': True, 'user_id': '14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 11:43:05,275 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "471928cc-a844-495a-b38c-c923d7d540bc",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "0E3DE2234922115ACF2B4E80978083C88458B0B67233282A1E6B45400F7AEAD3"
+    },
+    "application": {
+      "application_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+    },
+    "new": true,
+    "user_id": "14A42CF882C332E636362637FE73CE2490BCA37DBE9B91442CEACD1549D302CE"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Здравствуй!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 11:43:05,277 werkzeug 127.0.0.1 - - [17/Dec/2022 11:43:05] "POST /alice HTTP/1.1" 200 -
+2022-12-17 11:52:48,916 root Request: {'meta': {'locale': 'ru-RU', 'timezone': 'Europe/Moscow', 'client_id': 'yabro/22.11.3.818 (none none; Windows 10.0.19045)', 'interfaces': {'screen': {}, 'account_linking': {}}}, 'session': {'message_id': 0, 'session_id': '41832f6a-dec4-4cab-8013-620089a27f50', 'skill_id': '73ab1c92-79eb-42bc-98af-a7a68aaced7f', 'user': {'user_id': 'AB4CE5EB9E41E7514B7A237DEBFEDE7EE8D0D862362F8DA7489D71D5AEC754A7'}, 'application': {'application_id': '8E9BA92461960CA646C6844EA4E82E3CBD667F018EB75FE12D879F7FBBFC8EAC'}, 'new': True, 'user_id': '8E9BA92461960CA646C6844EA4E82E3CBD667F018EB75FE12D879F7FBBFC8EAC'}, 'request': {'command': '', 'original_utterance': '', 'nlu': {'tokens': [], 'entities': [], 'intents': {}}, 'markup': {'dangerous_context': False}, 'type': 'SimpleUtterance'}, 'state': {'session': {}, 'user': {}, 'application': {}}, 'version': '1.0'}
+2022-12-17 11:52:48,917 root Response: {
+  "version": "1.0",
+  "session": {
+    "message_id": 0,
+    "session_id": "41832f6a-dec4-4cab-8013-620089a27f50",
+    "skill_id": "73ab1c92-79eb-42bc-98af-a7a68aaced7f",
+    "user": {
+      "user_id": "AB4CE5EB9E41E7514B7A237DEBFEDE7EE8D0D862362F8DA7489D71D5AEC754A7"
+    },
+    "application": {
+      "application_id": "8E9BA92461960CA646C6844EA4E82E3CBD667F018EB75FE12D879F7FBBFC8EAC"
+    },
+    "new": true,
+    "user_id": "8E9BA92461960CA646C6844EA4E82E3CBD667F018EB75FE12D879F7FBBFC8EAC"
+  },
+  "response": {
+    "end_session": false,
+    "text": "Приветствую тебя!\nЭто навык “Разговорник на айтишном\".\nВ форме игры ты узнаешь слова из айти-сферы!\n  Ты готов начать?",
+    "buttons": [
+      {
+        "title": "да",
+        "hide": true
+      },
+      {
+        "title": "нет",
+        "hide": true
+      },
+      {
+        "title": "помощь",
+        "hide": true
+      }
+    ]
+  }
+}
+2022-12-17 11:52:48,918 werkzeug 127.0.0.1 - - [17/Dec/2022 11:52:48] "POST /alice HTTP/1.1" 200 -

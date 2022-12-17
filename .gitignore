@@ -1,5 +1,6 @@
 venv
-main.py
+history.py
 hw.py
+Data.json
 .idea
 .env
