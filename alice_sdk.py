@@ -36,7 +36,8 @@ class AliceResponse(object):
             "session": alice_request.session,
             "response": {
                 "end_session": False
-            }
+            },
+            "analytics": {}
         }
 
     def dumps(self):
@@ -55,8 +56,12 @@ class AliceResponse(object):
     def set_end_session(self, flag):
         self._response_dict['response']['end_session'] = flag
 
-    # def set_analytics(self, analytics):
-    #     self._response_dict['response']['analytics'] = analytics
+    def set_image(self, card):
+        self._response_dict['response']['card'] = card
+
+    def set_analytics(self, events):
+        self._response_dict['analytics']['events'] = events
 
     def __str__(self):
         return self.dumps()
+

@@ -3,28 +3,46 @@ import random
 from random import shuffle
 from itertools import cycle
 
+frequency = 10
+start = []
+close = []
+_help = []
+what_can_you_do = []
+dont_know = []
 
 # Копируем информацию из таблицы
 with open("it-dictionary.csv", "r", encoding="utf8") as csvfile:
     data = csv.DictReader(csvfile, delimiter="/", quotechar=" ")
-    events = {x["event"]: [x["word"], x['difficulty'], x['alternative'], x['alternative2'], x['hint']] for x in data}
+    events = {x["event"]: [x["word"], x["difficulty"], x["alternative"], x["alternative2"], x["hint"]] for x in data}
+print(events)
+with open("answer.csv", "r", encoding="utf8") as csvfile:
+    answer = csv.DictReader(csvfile, delimiter=",", quotechar=" ")
+    answers = {x["answer"]: [x["var1"], x["var2"], x["var3"], x["var4"], x["var5"]] for x in answer}
+print(answers)
 
-# with open('Data.json', encoding='utf8') as f:
-#     words = json.loads(f.read())['test']  # массив из словарей слов
 
+with open('simantics.csv', 'r', encoding="utf8") as f:
+    reader = csv.reader(f, delimiter=',')
+    for row in reader:
+        start += row[::frequency]
+        close += row[1::frequency]
+        _help += row[2::frequency]
+        what_can_you_do += row[3::frequency]
+        dont_know += row[4::frequency]
+print(dont_know)
 
-right = ['Отлично!', 'Правильно!', 'Супер!', 'Точно!', 'Верно!', 'Хорошо!', 'Неплохо!']
+right = ['Отлично!', 'Правильно!', 'Супер!', 'Точно!', 'Верно!', 'Хорошо!', 'Неплохо!', 'Именно так!']
 
-wrong = ['Ой!', 'Не то!', 'Ты ошибся!', 'Немного не то!', 'Неверно!', 'Неправильно!', 'Ошибочка!']
+wrong = ['Ой!', 'Не то :(!', 'Ошибка :(!', 'Немного не то!', 'Неверно!', 'Неправильно!', 'Ошибочка!']
 
 _next = ['Далее', 'Следующий вопрос', 'Продолжим', 'Следующее', 'Едем дальше!']
 
-wtf = ['Прости, не понимаю тебя', 'Можешь повторить, пожалуйста?', 'Повтори, пожалуйста', 'Прости, не слышу тебя']
+wtf = ['Прости, не понимаю тебя!', 'Можешь повторить, пожалуйста?', 'Повтори, пожалуйста!', 'Прости, не слышу тебя!']
 
 goodbye = ['Пока!', 'До встречи!', 'Будем на связи!', 'Рада была пообщаться!', 'Пока-пока!']
 
-hey = ['Привет', 'Приветствую тебя', 'Отличный день сегодня', 'Хорошо, что мы снова встретились', 'Приветик',
-       'Здравствуй']
+hey = ['Привет', 'Приветствую тебя', 'Отличный день сегодня', 'Хорошо, что мы снова встретились!', 'Приветик!',
+       'Здравствуй!']
 
 do_not_know = ["Жаль!",
                "Эх, жалко!",
@@ -47,48 +65,99 @@ do_not_know = ["Жаль!",
 # Функция для непосредственной обработки диалога.
 def handle_dialog(request, response, user_storage):
     # Если новая сессия тогда возвращаем приветствие.
-    if request.is_new_session:
+    if request.is_new_session or request.command.lower() in start:
         user_storage = {}
         response.set_text(
             f'{random.choice(hey)}!\n'
             'Это навык “Разговорник на айтишном".\n'  
             'В форме игры ты узнаешь слова из айти-сферы!\n  '
-            'Ты готов начать?'
+            'Для начала выбери сложность. Легко, нормально или сложно?\n'
         )
         response.set_buttons(
             [
-                {'title': 'да', 'hide': True},
-                {'title': 'нет', 'hide': True},
-                {'title': 'помощь', 'hide': True}
+                {'title': 'easy', 'hide': True},
+                {'title': 'medium', 'hide': True},
+                {'title': 'hard', 'hide': True},
             ]
         )
-        # response.set_analytics(
-        #     [
-        #         {'name': 'начало диалога'}
-        #     ]
-        # )
+
+        response.set_image(
+            {
+                "type": "BigImage",
+                "image_id": "1533899/b692acca8dacc02c2ecb",
+                "description": f'{random.choice(hey)}!\nЭто навык “Разговорник на айтишном".\n'
+                               'В форме игры ты узнаешь слова из айти-сферы!\n'
+                               'Для начал выбери сложность.\n',
+            }
+        )
 
         return response, user_storage
 
-# Обрабатываем ответы пользователя.
+    # Обрабатываем ответы пользователя.
     elif request.command.lower() == 'подсказка':
         # Подсказка если пользователь затрудняется ответить.
         buttons = user_storage['buttons']
         response.set_text(user_storage["hint"])
         response.set_buttons(buttons)
+        response.set_analytics(
+            [
+
+                {
+                    "name": "подсказка",
+                    "value": {
+                        "слово": user_storage["answer"],
+                    }
+                }
+            ]
+        )
 
         return response, user_storage
 
-    elif request.command.lower() == 'помощь':
-        # Помощь, которая показывает как работает диалог.
-        response.set_text("Я помогаю тебе проверить твое знание слов из ИТ сферы в формате викторины.\n Начнем?")
+    elif request.command.lower() in what_can_you_do:
+        response.set_text("Я помогаю тебе проверить твое знание слов из ИТ сферы в формате викторины.\n\n"
+                          "Я могу задавать вопросы и анализировать Ваши ответы.\n\n"
+                          "Оценивать Ваши знания в зависимости от результатов игры\n\n"
+                          "Больше информации Вы узнаете воспользовавшись командой - 'ПОМОЩЬ'\n\n"
+                          "Продолжим или нет?")
         user_storage = {}
         response.set_buttons(
             [
-                {'title': 'да', 'hide': True},
+                {'title': 'продолжить', 'hide': True},
                 {'title': 'нет', 'hide': True}
             ]
         )
+
+        return response, user_storage
+
+    elif request.command.lower() in _help:
+        # Помощь, которая показывает как работает диалог.
+        if 'choice' not in user_storage.keys():
+            response.set_text("Вы всегда можете обратится за помощью с помощью команды - 'ПОМОЩЬ'.\n\n"
+                              "Если у Вас возникли трудности с ответом на вопрос вы можете вызвать - 'ПОДСКАЗКУ'\n\n"
+                              "Если захотите пропустить вопрос воспользуйтесь командой - 'НЕ ЗНАЮ'\n\n"
+                              "Чтобы завершить игру используйте команду - 'КОНЕЦ ИГРЫ'\n\n"
+                              "Начнем? Да или нет?")
+            user_storage = {}
+            response.set_buttons(
+                [
+                    {'title': 'да', 'hide': True},
+                    {'title': 'нет', 'hide': True}
+                ]
+            )
+
+        else:
+            response.set_text("Вы всегда можете обратится за помощью с помощью команды - 'ПОМОЩЬ'.\n\n"
+                              "Если у Вас возникли трудности с ответом на вопрос вы можете вызвать - 'ПОДСКАЗКУ'\n\n"
+                              "Если захотите пропустить вопрос воспользуйтесь командой - 'НЕ ЗНАЮ'\n\n"
+                              "Чтобы завершить игру используйте команду - 'КОНЕЦ ИГРЫ'\n\n"
+                              "Продолжить или нет?")
+            user_storage = {}
+            response.set_buttons(
+                [
+                    {'title': 'продолжить', 'hide': True},
+                    {'title': 'нет', 'hide': True}
+                ]
+            )
 
         return response, user_storage
 
@@ -97,11 +166,46 @@ def handle_dialog(request, response, user_storage):
         response.set_text(f"Спасибо за игру! {random.choice(goodbye)}!")
         response.set_end_session(True)
         user_storage = {}
+        response.set_analytics(
+            [
+                {
+                    "name": "начало игры",
+                    "value": {
+                        "выбор": request.command.lower(),
+                    }
+                }
+            ]
+        )
+
+        return response, user_storage
+
+    elif request.command.lower() not in ['easy', 'medium', 'hard'] \
+            and 'choice' not in user_storage.keys():
+        response.set_text("Для начала Вам нужно выбрать сложность!\n")
+        response.set_buttons(
+            [
+                {'title': 'easy', 'hide': True},
+                {'title': 'medium', 'hide': True},
+                {'title': 'hard', 'hide': True},
+            ]
+        )
+        response.set_analytics(
+            [
+                {
+                    "name": "Начало игры",
+                    "value": {
+                        "действие": "не выбрана сложность",
+                        "произнес": request.command.lower(),
+                    }
+                }
+            ]
+        )
 
         return response, user_storage
 
     else:
-        if request.command.lower() in ['да', '', ''] and 'choice' not in user_storage.keys():
+        if request.command.lower() in ['easy', 'medium', 'hard'] and 'choice' \
+                not in user_storage.keys():
             # Генерируем первый вопрос.
             user_storage['choice'] = request.command.lower()
             _a = list(filter(lambda x: request.command.lower() == events[x][1], events.keys()))
@@ -134,10 +238,21 @@ def handle_dialog(request, response, user_storage):
             )
 
             response.set_buttons(user_storage["buttons"])
+            response.set_analytics(
+                [
+                    {
+                        "name": "начало игры",
+                        "value": {
+                            "выбор": request.command.lower(),
+                        }
+                    }
+                ]
+            )
 
             return response, user_storage
 
-        elif request.command.lower() == user_storage["answer"]:
+        elif request.command.lower() == user_storage["answer"] \
+                or request.command.lower() in answers[user_storage["answer"]]:
             # Пользователь ввел правильный вариант ответа.
             event = next(user_storage['questions'])
             word = events[event][0]
@@ -166,7 +281,7 @@ def handle_dialog(request, response, user_storage):
 
             return response, user_storage
 
-        elif request.command.lower() == "не знаю":
+        elif request.command.lower() == 'не знаю' or request.command.lower() in dont_know:
             # Пользователь не знает ответ.
             event = next(user_storage['questions'])
             word = events[event][0]
@@ -194,38 +309,61 @@ def handle_dialog(request, response, user_storage):
             )
             response.set_buttons(user_storage["buttons"])
 
+            response.set_analytics(
+                [
+                    {
+                        "name": "не знаю",
+                        "value": {
+                            "выбор": request.command.lower(),
+                            "слово": user_storage["answer"],
+                        }
+                    }
+                ]
+            )
+
             return response, user_storage
 
-        elif request.command.lower() == "конец игры":
+        elif request.command.lower() in close:
             # Если в любом месте диалог пользователь не хочет продолжать, выводим результат пользователя.
             # Завершаем сессию.
             response.set_text("Спасибо за игру!\n Правильных ответов: {}\n".format(user_storage["right_answers"])
-                    + "До встречи!")
+                              + "До встречи!")
             response.set_end_session(True)
             user_storage = {}
 
+            response.set_analytics(
+                [
+                    {
+                        "name": "конец игры",
+                        "value": {
+                            "произнес": request.command.lower(),
+                        }
+                    }
+                ]
+            )
+
             return response, user_storage
-
-
-        # Команда которая отрабатывает если Алиса не поняла что сказал пользователь.
-        # else:
-        #     response.set_text(random.choice(wtf))
-        #     #response.set_buttons(
-        #     #     [
-        #     #         {'title': 'да', 'hide': True},
-        #     #         {'title': 'нет', 'hide': True},
-        #     #         {'title': 'помощь', 'hide': True}
-        #     #     ]
-        #     # )
-        #
-        #     return response, user_storage
 
         buttons = user_storage['buttons']
         question = user_storage['event']
 
         response.set_buttons(buttons)
         response.set_text(f"{random.choice(wrong)}! Попробуй еще раз.\n{question}")
+        response.set_analytics(
+            [
+                {
+                    "name": "нераспознанный ответ",
+                    "value": {
+                        "произнес": request.command.lower(),
+                    }
+                }
+            ]
+        )
+
         return response, user_storage
+
+
+
 
 
 
