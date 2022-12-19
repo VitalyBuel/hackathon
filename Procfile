@@ -1,1 +1,1 @@
-worker: python alice_app.py
+web: python alice_app.py
