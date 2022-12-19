@@ -14,12 +14,10 @@ dont_know = []
 with open("it-dictionary.csv", "r", encoding="utf8") as csvfile:
     data = csv.DictReader(csvfile, delimiter="/", quotechar=" ")
     events = {x["event"]: [x["word"], x["difficulty"], x["alternative"], x["alternative2"], x["hint"]] for x in data}
-print(events)
+
 with open("answer.csv", "r", encoding="utf8") as csvfile:
     answer = csv.DictReader(csvfile, delimiter=",", quotechar=" ")
     answers = {x["answer"]: [x["var1"], x["var2"], x["var3"], x["var4"], x["var5"]] for x in answer}
-print(answers)
-
 
 with open('simantics.csv', 'r', encoding="utf8") as f:
     reader = csv.reader(f, delimiter=',')
@@ -29,7 +27,6 @@ with open('simantics.csv', 'r', encoding="utf8") as f:
         _help += row[2::frequency]
         what_can_you_do += row[3::frequency]
         dont_know += row[4::frequency]
-print(dont_know)
 
 right = ['Отлично!', 'Правильно!', 'Супер!', 'Точно!', 'Верно!', 'Хорошо!', 'Неплохо!', 'Именно так!']
 
